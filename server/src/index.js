@@ -1,9 +1,12 @@
+require('dotenv').config();
+
 import { ApolloServer } from 'apollo-server';
 import mongoose from 'mongoose';
 import typeDefs from './typeDefs';
 import resolvers from './resolvers';
 
 //NOTE: I removed the config.js file.  These variables are now in .env
+// This is for security reasons when pushed to github.
 // import {
 //   APP_PORT,
 //   IN_PROD,
