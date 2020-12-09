@@ -1,6 +1,7 @@
-import root from './root';
-import user from './user';
-import cocktail from './cocktail';
-import liquor from './liquor';
+import root from './root.js';
+import user from './user.js';
+import cocktail from './cocktail.js';
+import liquor from './liquor.js';
 
 export default [root, user, cocktail, liquor];
+// module.exports = [root, user, cocktail, liquor];

@@ -1,4 +1,4 @@
-import mongoose, { Schema } from 'mongoose';
+import mongoose from 'mongoose';
 
 const liquorSchema = new mongoose.Schema(
   {
@@ -9,7 +9,7 @@ const liquorSchema = new mongoose.Schema(
     isAvailable: { type: Boolean, required: true },
     type: { type: String, required: true },
     owner: {
-      type: Schema.Types.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: 'User',
       required: true,
     },

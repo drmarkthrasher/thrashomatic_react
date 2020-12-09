@@ -2,8 +2,8 @@ import Joi from '@hapi/joi';
 import mongoose from 'mongoose';
 import { UserInputError } from 'apollo-server';
 import { AuthenticationError } from 'apollo-server-core';
-import { Liquor } from '../models';
-import { addLiquor } from '../schemas';
+import { Liquor } from '../models/index.js';
+import { addLiquor } from '../schemas/index.js';
 
 export default {
   Query: {

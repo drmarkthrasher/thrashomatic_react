@@ -1,9 +1,18 @@
-require('dotenv').config();
+// require('dotenv').config();
+
+// this is for using variables in .env file
+import dotenv from 'dotenv';
+dotenv.config();
 
 import { ApolloServer } from 'apollo-server';
 import mongoose from 'mongoose';
-import typeDefs from './typeDefs';
-import resolvers from './resolvers';
+import typeDefs from './typeDefs/index.js';
+import resolvers from './resolvers/index.js';
+import getUser from './middleware/getuser.js';
+// const { ApolloServer } = require('apollo-server');
+// const mongoose = require('mongoose');
+// const typeDefs = require('./typeDefs');
+// const resolvers = require('./resolvers');
 
 //NOTE: I removed the config.js file.  These variables are now in .env
 // This is for security reasons when pushed to github.
@@ -15,8 +24,6 @@ import resolvers from './resolvers';
 //   DB_HOST,
 //   DB_NAME,
 // } from './config';
-
-import getUser from './middleware/getuser';
 
 (async () => {
   try {
@@ -42,6 +49,7 @@ import getUser from './middleware/getuser';
         req.isAuth = isAuth;
         // console.log(req.body);
         // console.log(res);
+        // console.log(token);
         return req;
       },
     });

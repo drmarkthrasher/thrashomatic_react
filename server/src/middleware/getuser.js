@@ -1,8 +1,9 @@
-const jwt = require('jsonwebtoken');
+// const jwt = require('jsonwebtoken');
+import jwt from 'jsonwebtoken';
 
 // const { JWT_SECRET } = require('../config');
 
-module.exports = (token) => {
+export default function (token) {
   // check if token was in the header
   if (!token || token == '') return [null, null, false];
 
@@ -19,4 +20,4 @@ module.exports = (token) => {
   const email = decodedToken.email;
   const isAuth = true;
   return [userId, email, isAuth];
-};
+}

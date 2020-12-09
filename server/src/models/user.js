@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
-import { hash } from 'bcryptjs';
-const uniqueValidator = require('mongoose-unique-validator');
+import { hash } from 'bcrypt';
+// const uniqueValidator = require('mongoose-unique-validator');
+import uniqueValidator from 'mongoose-unique-validator';
 
 const userSchema = new mongoose.Schema(
   {

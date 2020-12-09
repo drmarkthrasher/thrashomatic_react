@@ -3,8 +3,8 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 // import { JWT_SECRET } from '../config';
 import { UserInputError } from 'apollo-server';
-import { register, login } from '../schemas'; //for Joi validation
-import { User } from '../models';
+import { register, login } from '../schemas/index.js'; //for Joi validation
+import { User } from '../models/index.js';
 import { CircularProgress } from '@material-ui/core';
 
 export default {

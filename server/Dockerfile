@@ -13,3 +13,4 @@ RUN npm install
 COPY . /app/server/
 
 CMD ["npm", "run", "start"]
+
