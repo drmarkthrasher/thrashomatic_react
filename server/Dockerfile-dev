@@ -1,4 +1,4 @@
-FROM node
+FROM node:latest
 
 RUN npm install -g nodemon
 
@@ -11,5 +11,7 @@ COPY package*.json /app/server/
 RUN npm install
 
 COPY . /app/server/
+
+EXPOSE 5000
 
 CMD ["npm", "run", "start"]
